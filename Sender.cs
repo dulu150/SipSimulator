@@ -12,6 +12,8 @@ namespace SipSimulator
         public abstract void Send(string textWaitToSend);
 
         public abstract string Recv();
+
+        public abstract void RealeaseAllResource();
     }
 
     class UdpSender : Sender
@@ -29,21 +31,32 @@ namespace SipSimulator
             IPAddress localIP = IPAddress.Parse(localip);
             int localPort = int.Parse(localport);
             localPoint = new IPEndPoint(localIP, localPort);
+
+            client = new UdpClient(localPoint);
         }
 
         public override void Send(string textWaitToSend)
         {
             byte[] sendData = null;
             sendData = Encoding.Default.GetBytes(textWaitToSend);
-
-            client = new UdpClient(localPoint);
+ 
             client.Send(sendData, sendData.Length, remotePoint);
-            client.Close();
         }
 
         public override string Recv()
         {
-            return "";
+            string receiveString = "";
+            byte[] receiveData = null;
+
+            receiveData = client.Receive(ref remotePoint);//接收数据 
+            receiveString = Encoding.Default.GetString(receiveData);
+
+            return receiveString;
+        }
+
+        public override void RealeaseAllResource()
+        {
+            client.Close();
         }
     }
 }
