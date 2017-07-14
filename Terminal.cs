@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,12 +34,20 @@ namespace SipSimulator
 
         public string Recv()
         {
-            return "";
+            return sendClient.Recv();
         }
 
         public bool Recv(string msgTypeWaitToRecv)
         {
+            if (sendClient.Recv().IndexOf(msgTypeWaitToRecv) >= 0)
+                return true;
+
             return false;
+        }
+
+        public void Stop()
+        {
+            sendClient.RealeaseAllResource();
         }
     }
 }
