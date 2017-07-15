@@ -41,6 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCreatSocket = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtcallerremoteip = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtcallerremoteport = new System.Windows.Forms.TextBox();
+            this.txtcalleeremoteip = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtcalleeremoteport = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCallStart
@@ -70,6 +78,7 @@
             this.txtCallerTrace.Location = new System.Drawing.Point(12, 22);
             this.txtCallerTrace.Multiline = true;
             this.txtCallerTrace.Name = "txtCallerTrace";
+            this.txtCallerTrace.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtCallerTrace.Size = new System.Drawing.Size(334, 302);
             this.txtCallerTrace.TabIndex = 4;
             this.txtCallerTrace.Text = "主叫消息跟踪：";
@@ -79,6 +88,7 @@
             this.txtCalleeTrace.Location = new System.Drawing.Point(362, 22);
             this.txtCalleeTrace.Multiline = true;
             this.txtCalleeTrace.Name = "txtCalleeTrace";
+            this.txtCalleeTrace.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtCalleeTrace.Size = new System.Drawing.Size(334, 302);
             this.txtCalleeTrace.TabIndex = 5;
             this.txtCalleeTrace.Text = "被叫消息跟踪：";
@@ -87,34 +97,34 @@
             // 
             this.txtcallerip.Location = new System.Drawing.Point(12, 342);
             this.txtcallerip.Name = "txtcallerip";
-            this.txtcallerip.Size = new System.Drawing.Size(167, 21);
+            this.txtcallerip.Size = new System.Drawing.Size(78, 21);
             this.txtcallerip.TabIndex = 6;
             // 
             // txtcalleeip
             // 
-            this.txtcalleeip.Location = new System.Drawing.Point(529, 342);
+            this.txtcalleeip.Location = new System.Drawing.Point(618, 336);
             this.txtcalleeip.Name = "txtcalleeip";
-            this.txtcalleeip.Size = new System.Drawing.Size(167, 21);
+            this.txtcalleeip.Size = new System.Drawing.Size(78, 21);
             this.txtcalleeip.TabIndex = 7;
             // 
             // txtcallerport
             // 
             this.txtcallerport.Location = new System.Drawing.Point(12, 369);
             this.txtcallerport.Name = "txtcallerport";
-            this.txtcallerport.Size = new System.Drawing.Size(167, 21);
+            this.txtcallerport.Size = new System.Drawing.Size(66, 21);
             this.txtcallerport.TabIndex = 8;
             // 
             // txtcalleeport
             // 
-            this.txtcalleeport.Location = new System.Drawing.Point(529, 369);
+            this.txtcalleeport.Location = new System.Drawing.Point(630, 363);
             this.txtcalleeport.Name = "txtcalleeport";
-            this.txtcalleeport.Size = new System.Drawing.Size(167, 21);
+            this.txtcalleeport.Size = new System.Drawing.Size(66, 21);
             this.txtcalleeport.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 345);
+            this.label1.Location = new System.Drawing.Point(96, 342);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 10;
@@ -123,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(482, 345);
+            this.label2.Location = new System.Drawing.Point(571, 342);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 11;
@@ -132,7 +142,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(185, 372);
+            this.label3.Location = new System.Drawing.Point(84, 372);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 12;
@@ -141,7 +151,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(470, 372);
+            this.label4.Location = new System.Drawing.Point(571, 372);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 13;
@@ -157,11 +167,83 @@
             this.btnCreatSocket.UseVisualStyleBackColor = true;
             this.btnCreatSocket.Click += new System.EventHandler(this.btnCreatSocket_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(167, 342);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "对端IP";
+            // 
+            // txtcallerremoteip
+            // 
+            this.txtcallerremoteip.Location = new System.Drawing.Point(214, 339);
+            this.txtcallerremoteip.Name = "txtcallerremoteip";
+            this.txtcallerremoteip.Size = new System.Drawing.Size(78, 21);
+            this.txtcallerremoteip.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(155, 372);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "对端PORT";
+            // 
+            // txtcallerremoteport
+            // 
+            this.txtcallerremoteport.Location = new System.Drawing.Point(226, 369);
+            this.txtcallerremoteport.Name = "txtcallerremoteport";
+            this.txtcallerremoteport.Size = new System.Drawing.Size(66, 21);
+            this.txtcallerremoteport.TabIndex = 18;
+            // 
+            // txtcalleeremoteip
+            // 
+            this.txtcalleeremoteip.Location = new System.Drawing.Point(418, 336);
+            this.txtcalleeremoteip.Name = "txtcalleeremoteip";
+            this.txtcalleeremoteip.Size = new System.Drawing.Size(78, 21);
+            this.txtcalleeremoteip.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(502, 339);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "对端IP";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(502, 372);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "对端PORT";
+            // 
+            // txtcalleeremoteport
+            // 
+            this.txtcalleeremoteport.Location = new System.Drawing.Point(418, 369);
+            this.txtcalleeremoteport.Name = "txtcalleeremoteport";
+            this.txtcalleeremoteport.Size = new System.Drawing.Size(66, 21);
+            this.txtcalleeremoteport.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 545);
+            this.Controls.Add(this.txtcalleeremoteport);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtcalleeremoteip);
+            this.Controls.Add(this.txtcallerremoteport);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtcallerremoteip);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCreatSocket);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -198,6 +280,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCreatSocket;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtcallerremoteip;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtcallerremoteport;
+        private System.Windows.Forms.TextBox txtcalleeremoteip;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtcalleeremoteport;
     }
 }
 

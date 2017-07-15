@@ -26,15 +26,17 @@ namespace SipSimulator
             myapp.GetSipMessageList("calleemsgtemplate.txt", CallRole.Callee);
 
             txtcallerip.Text = "127.0.0.1"; txtcallerport.Text = "12345";
+            txtcallerremoteip.Text = "127.0.0.1"; txtcallerremoteport.Text = "8848";
             txtcalleeip.Text = "127.0.0.1"; txtcalleeport.Text = "8848";
+            txtcalleeremoteip.Text = "127.0.0.1"; txtcalleeremoteport.Text = "12345";
 
             Control.CheckForIllegalCrossThreadCalls = false;
         }
 
         private void btnCreatSocket_Click(object sender, EventArgs e)
         {
-            caller = new Terminal("UDP", txtcallerip.Text, txtcallerport.Text, txtcalleeip.Text, txtcalleeport.Text);
-            callee = new Terminal("UDP", txtcalleeip.Text, txtcalleeport.Text, txtcallerip.Text, txtcallerport.Text);
+            caller = new Terminal("UDP", txtcallerip.Text, txtcallerport.Text, txtcallerremoteip.Text, txtcallerremoteport.Text);
+            callee = new Terminal("UDP", txtcalleeip.Text, txtcalleeport.Text, txtcalleeremoteip.Text, txtcalleeremoteport.Text);
         }
 
         private void btnCallStart_Click(object sender, EventArgs e)
