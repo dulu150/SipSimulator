@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using udptest;
-
 
 namespace SipSimulator
 {
@@ -21,18 +19,23 @@ namespace SipSimulator
                 Log.RecordErr("Socket启动成功了:" + localip + ":" + localport);
         }
 
-        public void Send(string textWaitToSend)
+        public string Send(string textWaitToSend)
         {
             sendClient.Send(textWaitToSend);
+            return textWaitToSend;
         }
 
-        public void Send(string fileWaitToSendPath, bool readFile)
+        public string Send(string fileWaitToSendPath, bool readFile)
         {
             string sendstring = SIPMmessageAssembler.GetSipMessageFromFile(fileWaitToSendPath);
             if (sendstring.Length <= 0)
+            {
                 Log.RecordErr("待发送的SIP消息无效,请检查SIP消息");
+                return "待发送的SIP消息无效,请检查SIP消息";
+            }
 
             sendClient.Send(sendstring);
+            return sendstring;
         }
 
         public string Recv()

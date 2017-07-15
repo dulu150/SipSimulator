@@ -1,0 +1,8 @@
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\bin\Debug\SipSimulator.exe
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\bin\Debug\SipSimulator.pdb
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\obj\Debug\SipSimulator.Form1.resources
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\obj\Debug\SipSimulator.Properties.Resources.resources
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\obj\Debug\SipSimulator.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\obj\Debug\SipSimulator.exe
+C:\Users\Administrator\Desktop\mygithub\SipSimulator\SipSimulator\obj\Debug\SipSimulator.pdb
