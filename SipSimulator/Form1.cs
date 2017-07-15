@@ -46,12 +46,14 @@ namespace SipSimulator
             myapp.callertrace = txtCallerTrace;
             myapp.calleetrace = txtCalleeTrace;
 
+            myapp.SetInitFinishFlag(true);
             myapp.Run();
         }
 
         private void btnCallStop_Click(object sender, EventArgs e)
         {
             myapp.Stop();
+            myapp.SetInitFinishFlag(false);
         }
     }
 }

@@ -19,23 +19,35 @@ namespace SipSimulator
         public TextBox calleetrace;
         Thread callerthread;
         Thread calleethread;
+        Boolean bInitFinish = false;
 
         public void Run()
         {
-            callerthread = new Thread(StartCall);
-            callerthread.Start(CallRole.Caller);
+            if (bInitFinish == true)
+            {
+                callerthread = new Thread(StartCall);
+                callerthread.Start(CallRole.Caller);
 
-            calleethread = new Thread(StartCall);
-            calleethread.Start(CallRole.Callee);
+                calleethread = new Thread(StartCall);
+                calleethread.Start(CallRole.Callee);
+            }
+        }
+
+        public void SetInitFinishFlag(bool flag)
+        {
+            bInitFinish = flag;
         }
 
         public void Stop()
         {
-            callerthread.Abort();
-            calleethread.Abort();
+            if (bInitFinish == true)
+            {
+                callerthread.Abort();
+                calleethread.Abort();
 
-            caller.Stop();
-            callee.Stop();
+                caller.Stop();
+                callee.Stop();
+            }
         }
 
         void StartCall(object obj)
