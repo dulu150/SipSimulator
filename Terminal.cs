@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
+using udptest;
+
 
 namespace SipSimulator
 {
@@ -15,7 +16,9 @@ namespace SipSimulator
         {
             sendClient = SenderFactory.CreateSender(protocal, localip, localport, remoteip, remoteport);
             if (sendClient == null)
-                MessageBox.Show("Socket启动失败,请检查配置");    
+                Log.RecordErr("Socket启动失败,请检查配置");
+            else
+                Log.RecordErr("Socket启动成功了:" + localip + ":" + localport);
         }
 
         public void Send(string textWaitToSend)
@@ -27,7 +30,7 @@ namespace SipSimulator
         {
             string sendstring = SIPMmessageAssembler.GetSipMessageFromFile(fileWaitToSendPath);
             if (sendstring.Length <= 0)
-                MessageBox.Show("待发送的SIP消息无效,请检查SIP消息");
+                Log.RecordErr("待发送的SIP消息无效,请检查SIP消息");
 
             sendClient.Send(sendstring);
         }

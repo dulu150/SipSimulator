@@ -46,10 +46,20 @@ namespace SipSimulator
         public override string Recv()
         {
             string receiveString = "";
-            byte[] receiveData = null;
+            
+            bool recvFinished = false;
+            while (false == recvFinished)
+            {
+                string recvbuffer = "";
+                byte[] receiveData = null;
 
-            receiveData = client.Receive(ref remotePoint);//接收数据 
-            receiveString = Encoding.Default.GetString(receiveData);
+                receiveData = client.Receive(ref remotePoint);//接收数据 
+                recvbuffer = Encoding.Default.GetString(receiveData);
+                receiveString += recvbuffer;
+
+                if (recvbuffer.EndsWith("\r\n\r\n"))
+                    recvFinished = true;
+            }
 
             return receiveString;
         }
