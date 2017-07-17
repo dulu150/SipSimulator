@@ -39,6 +39,7 @@ namespace SipSimulator
         {
             byte[] sendData = null;
             sendData = Encoding.Default.GetBytes(textWaitToSend);
+            Log.PrintTrace(localPoint.ToString() + ":send msg:" + textWaitToSend, CallRole.Invalidrole);
  
             client.Send(sendData, sendData.Length, remotePoint);
         }
@@ -53,14 +54,13 @@ namespace SipSimulator
                 string recvbuffer = "";
                 byte[] receiveData = null;
 
-                receiveData = client.Receive(ref remotePoint);//接收数据 
+                receiveData = client.Receive(ref remotePoint);
                 recvbuffer = Encoding.Default.GetString(receiveData);
                 receiveString += recvbuffer;
-
-                if (recvbuffer.EndsWith("\r\n\r\n"))
+                if (recvbuffer.EndsWith("\r\n"))
                     recvFinished = true;
             }
-
+            Log.PrintTrace("Msg from " + remotePoint.ToString() + " delimitates finish:" + receiveString, CallRole.Invalidrole);
             return receiveString;
         }
 

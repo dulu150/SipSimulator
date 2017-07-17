@@ -18,8 +18,10 @@ namespace SipSimulator
         {
             if (role == CallRole.Caller)
                 File.AppendAllText("callerlog.txt", err + Environment.NewLine);
-            else
+            else if (role == CallRole.Callee)
                 File.AppendAllText("calleelog.txt", err + Environment.NewLine);
+            else
+                File.AppendAllText("commonlog.txt", err + Environment.NewLine);
         }
     }
 }

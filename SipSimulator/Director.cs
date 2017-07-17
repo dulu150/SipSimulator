@@ -69,10 +69,11 @@ namespace SipSimulator
             trace.Text += "\r\n";
             foreach (SipMessage tmp in msgList)
             {
+                Log.PrintTrace("Now " + role.ToString() + " decide to " + tmp.msgDirection.ToString() + " msg:" + tmp.sipMsgFilePath, role);
                 if (tmp.msgDirection == MsgDirection.SEND)
-                    trace.Text += MsgDirection.SEND.ToString() + "\r\n" + terminal.Send(tmp.sipMsgFilePath, true);
+                    trace.Text += MsgDirection.SEND.ToString() + "\r\n" + terminal.Send(tmp.sipMsgFilePath, MsgSourceType.FROM_FILE);
                 else
-                    trace.Text += MsgDirection.RECV.ToString() + "\r\n" + terminal.Recv();
+                    trace.Text += MsgDirection.RECV.ToString() + "\r\n" + terminal.Recv(tmp.sipMsgFilePath, MsgSourceType.FROM_MSGTYPE);
             }
         }
 

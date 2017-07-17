@@ -1,3 +1,26 @@
-INVITE
-《唐诗三百首》是一部流传很广的唐诗选集。唐朝（618年~907年）二百八十九年间，是中国诗歌发展的黄金时代，云蒸霞蔚，名家辈出，唐诗数量多达五万余首
+INVITE sip:+8613812062202@huawei.com;User=phone SIP/2.0
+Via: SIP qqqq
+Max-Forwards: 70
+Route: <sip:200.40.36.101:5060;lr>, <sip:b2.scscf.huawei.com;lr>
+P-Preferred-Identity: <sip:+8613812062201@huawei.com;User=phone>
+P-Access-Network-Info: 3GPP-UTRAN-TDD;utran-cell-id-3gpp=234151D0FCE11
+Privacy: none
+From: <sip:+8613812062201@huawei.com;User=phone>;tag=8dd6914e9c8b8821bb4f7062a7ae7c4b
+To: <sip:+8613812062202@huawei.com;User=phone>
+Call-ID: 8dd6914e9c8b8821bb4f7062a7ae7c4b
+Require: precondition
+CSeq: 53375 INVITE
+Supported: 100rel
+Contact: <sip:158.1.36.11:10200>
+Allow: INVITE, ACK, CANCEL, BYE, PRACK, UPDATE, REFER, MESSAGE
+Content-Length: 154
+Content-Type:application/sdp
+
+v=0
+o=Spider-Phone 1319015805 1319015805 IN IP4 158.1.36.11
+s=Spider-Phone
+c=IN IP4 158.1.36.11
+t=0 0
+m=audio 30200 RTP/AVP 8
+a=rtpmap:8 PCMA/8000
 

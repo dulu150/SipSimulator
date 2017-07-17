@@ -1,3 +1,9 @@
-180
-4
+SIP/2.0 407 Proxy Authorization Required
+From: <sip:+8613812062201@huawei.com;user=phone>;tag=8dd6914e9c8b8821bb4f7062a7ae7c4b
+To: <sip:+8613812062202@huawei.com;user=phone>;tag=51164e4e168ef23445c4aa8168351d3d
+Call-ID: asbc8dd6914e9c8b8821bb4f7062a7ae7c4b
+CSeq: 53375 INVITE
+Proxy-Authenticate: Digest realm="+8613812062201@huawei.com",nonce="8vcIPvgOnIbNdYXBf4JAfR3kudD3K/0qRH0bkqT2",qop="auth",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+Via:SIP/2.0/UDP 200.40.36.151:10480;branch=z9hG4bK64mn4w56y87vx6y9wnlv6nl96;Role=3;Hpt=8e62_16;TRC=a18-ffffffff;srti=s0_0
 

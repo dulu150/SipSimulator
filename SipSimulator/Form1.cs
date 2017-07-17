@@ -36,7 +36,9 @@ namespace SipSimulator
         private void btnCreatSocket_Click(object sender, EventArgs e)
         {
             caller = new Terminal("UDP", txtcallerip.Text, txtcallerport.Text, txtcallerremoteip.Text, txtcallerremoteport.Text);
+            Log.PrintTrace("caller create socket:" + txtcallerip.Text + ":" + txtcallerport.Text + "--" + txtcallerremoteip.Text + ":" + txtcallerremoteport.Text, CallRole.Caller);
             callee = new Terminal("UDP", txtcalleeip.Text, txtcalleeport.Text, txtcalleeremoteip.Text, txtcalleeremoteport.Text);
+            Log.PrintTrace("callee create socket:" + txtcalleeip.Text + ":" + txtcalleeport.Text + "--" + txtcalleeremoteip.Text + ":" + txtcalleeremoteport.Text, CallRole.Callee);
         }
 
         private void btnCallStart_Click(object sender, EventArgs e)

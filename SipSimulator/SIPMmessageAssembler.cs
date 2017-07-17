@@ -21,5 +21,39 @@ namespace SipSimulator
 
             return sendString;
         }
+
+        public static string GetViaHeaderFromSipMessage(string sipMessage)
+        {
+            string[] AllText = sipMessage.Split(new char[]{'\r', '\n'});
+
+            foreach (string line in AllText)
+            {
+                if (line.IndexOf("Via:") >= 0)
+                    return line;
+            }
+
+            return "";
+        }
+
+        public static string SetViaHeaderToSipMessage(string sipMessage, string viaHeader)
+        {
+            if (viaHeader.Length <= 0)
+                return sipMessage;
+
+            string[] AllText = sipMessage.Split(new char[] { '\r', '\n' });
+            string sipMessageAfterMod = "";
+
+            foreach (string line in AllText)
+            {
+                if (line.IndexOf("Via:") >= 0)
+                    sipMessageAfterMod += viaHeader + Environment.NewLine;
+                else if (line.StartsWith("\r\n") || line.Length <= 0)
+                    continue;
+                else
+                    sipMessageAfterMod += line + Environment.NewLine;
+            }
+            sipMessageAfterMod +=  Environment.NewLine;
+            return sipMessageAfterMod;
+        }
     }
 }
