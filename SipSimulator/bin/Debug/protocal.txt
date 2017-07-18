@@ -1,0 +1,177 @@
+
+Save time: 2017-07-17 14:19:59
+User name: admin
+
+Total 5 Records
+
+
+================================================================================
+
+[No.                   ] 1
+[TimeStamp             ] 2017-07-17 14:18:55.317
+[Source Address        ] 159.1.63.101
+[Source Port           ] 5060
+[Destination Address   ] 200.40.63.151
+[Destination Port      ] 5060
+[Message Interface Type] >TRACE_SIPC_UP
+[Message Type          ] INVITE
+[Hex Message           ] INVITE sip:+8613812063202@huawei.com;User=phone SIP/2.0  Via: SIP/2.0/UDP 159.1.63.101:5060;branch=z9hG4bKc174b56b3b743aad5c124b31456fdb13  Max-Forwards: 69  P-Asserted-Identity: <sip:+8613812063201@huawei.com;User=phone>  P-Charging-Vector: icid-value="AyretyU0dm+6O2IrT5tAFrbHLso=023551024"; orig-ioi=home1.net  Privacy: none  Record-Route: <sip:159.1.63.101:5060;lr>  From: <sip:+8613812063201@huawei.com;User=phone>;tag=c174b56b3b743aad5c124b31456fdb13  To: <sip:+8613812063202@huawei.com;User=phone>  Call-ID: c174b56b3b743aad5c124b31456fdb13  Require: precondition  CSeq: 100 INVITE  Supported: 100rel  Contact: <sip:159.1.63.101:5060>  Allow: INVITE, ACK, CANCEL, BYE, PRACK, UPDATE, REFER, MESSAGE  Content-Length: 176  Content-Type:application/sdp    v=0  o=Spider-Phone 1347361369 1347362462 IN IP4 158.1.63.11  s=Spider-Phone  c=IN IP4 158.1.63.11  t=0 0  m=audio 30200 RTP/AVP 8  c=IN IP4 158.1.63.11  a=rtpmap:8 PCMA/8000    
+
+
+INVITE sip:+8613812063202@huawei.com;User=phone SIP/2.0
+Via: SIP/2.0/UDP 159.1.63.101:5060;branch=z9hG4bKc174b56b3b743aad5c124b31456fdb13
+Max-Forwards: 69
+P-Asserted-Identity: <sip:+8613812063201@huawei.com;User=phone>
+P-Charging-Vector: icid-value="AyretyU0dm+6O2IrT5tAFrbHLso=023551024"; orig-ioi=home1.net
+Privacy: none
+Record-Route: <sip:159.1.63.101:5060;lr>
+From: <sip:+8613812063201@huawei.com;User=phone>;tag=c174b56b3b743aad5c124b31456fdb13
+To: <sip:+8613812063202@huawei.com;User=phone>
+Call-ID: c174b56b3b743aad5c124b31456fdb13
+Require: precondition
+CSeq: 100 INVITE
+Supported: 100rel
+Contact: <sip:159.1.63.101:5060>
+Allow: INVITE, ACK, CANCEL, BYE, PRACK, UPDATE, REFER, MESSAGE
+Content-Length: 176
+Content-Type:application/sdp
+
+v=0
+o=Spider-Phone 1347361369 1347362462 IN IP4 158.1.63.11
+s=Spider-Phone
+c=IN IP4 158.1.63.11
+t=0 0
+m=audio 30200 RTP/AVP 8
+c=IN IP4 158.1.63.11
+a=rtpmap:8 PCMA/8000
+
+
+
+
+================================================================================
+
+[No.                   ] 2
+[TimeStamp             ] 2017-07-17 14:18:55.317
+[Source Address        ] 200.40.63.151
+[Source Port           ] 5060
+[Destination Address   ] 159.1.63.101
+[Destination Port      ] 5060
+[Message Interface Type] <TRACE_SIPC_DOWN
+[Message Type          ] 100 TRYING
+[Hex Message           ] SIP/2.0 100 Trying  Via: SIP/2.0/UDP 159.1.63.101:5060;branch=z9hG4bKc174b56b3b743aad5c124b31456fdb13  Call-ID: c174b56b3b743aad5c124b31456fdb13  From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13  To: <sip:+8613812063202@huawei.com;user=phone>  CSeq: 100 INVITE  Content-Length: 0    
+
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 159.1.63.101:5060;branch=z9hG4bKc174b56b3b743aad5c124b31456fdb13
+Call-ID: c174b56b3b743aad5c124b31456fdb13
+From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13
+To: <sip:+8613812063202@huawei.com;user=phone>
+CSeq: 100 INVITE
+Content-Length: 0
+
+
+
+
+================================================================================
+
+[No.                   ] 128
+[TimeStamp             ] 2017-07-17 14:18:55.334
+[Source Address        ] 200.40.63.101
+[Source Port           ] 5060
+[Destination Address   ] 159.1.63.102
+[Destination Port      ] 5060
+[Message Interface Type] <TRACE_SIPC_DOWN
+[Message Type          ] INVITE
+[Hex Message           ] INVITE sip:+8613812063202@huawei.com;user=phone SIP/2.0  Via: SIP/2.0/UDP 200.40.63.101:5060;branch=z9hG4bKred2q0ws2b3w0n3s0dbanerrj;Role=3;Hpt=8e48_16;TRC=a19-ffffffff  Record-Route: <sip:200.40.63.101:5060;transport=udp;lr;Hpt=8e48_16;CxtId=4;TRC=a19-ffffffff;X-HwB2bUaCookie=12>  Call-ID: isbcc174b56b3b743aad5c124b31456fdb13  From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13  To: <sip:+8613812063202@huawei.com;user=phone>  CSeq: 100 INVITE  Allow: INVITE,ACK,CANCEL,BYE,PRACK,UPDATE,REFER,MESSAGE  Contact: <sip:200.40.63.101:5060;transport=udp;Hpt=8e48_16;CxtId=4;TRC=a19-ffffffff>  Max-Forwards: 68  Require: precondition  Supported: 100rel  P-Asserted-Identity: <sip:+8613812063201@huawei.com;user=phone>  Privacy: none  P-Charging-Vector: icid-value="AyretyU0dm+6O2IrT5tAFrbHLso=023551024";orig-ioi=home1.net  Content-Length: 167  Content-Type: application/sdp    v=0  o=- 1347361369 1347362462 IN IP4 200.80.63.101  s=SBC call  c=IN IP4 200.80.63.101  t=0 0  m=audio 10318 RTP/AVP 8  c=IN IP4 200.80.63.101  a=rtpmap:8 PCMA/8000  
+
+
+INVITE sip:+8613812063202@huawei.com;user=phone SIP/2.0
+Via: SIP/2.0/UDP 200.40.63.101:5060;branch=z9hG4bKred2q0ws2b3w0n3s0dbanerrj;Role=3;Hpt=8e48_16;TRC=a19-ffffffff
+Record-Route: <sip:200.40.63.101:5060;transport=udp;lr;Hpt=8e48_16;CxtId=4;TRC=a19-ffffffff;X-HwB2bUaCookie=12>
+Call-ID: isbcc174b56b3b743aad5c124b31456fdb13
+From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13
+To: <sip:+8613812063202@huawei.com;user=phone>
+CSeq: 100 INVITE
+Allow: INVITE,ACK,CANCEL,BYE,PRACK,UPDATE,REFER,MESSAGE
+Contact: <sip:200.40.63.101:5060;transport=udp;Hpt=8e48_16;CxtId=4;TRC=a19-ffffffff>
+Max-Forwards: 68
+Require: precondition
+Supported: 100rel
+P-Asserted-Identity: <sip:+8613812063201@huawei.com;user=phone>
+Privacy: none
+P-Charging-Vector: icid-value="AyretyU0dm+6O2IrT5tAFrbHLso=023551024";orig-ioi=home1.net
+Content-Length: 167
+Content-Type: application/sdp
+
+v=0
+o=- 1347361369 1347362462 IN IP4 200.80.63.101
+s=SBC call
+c=IN IP4 200.80.63.101
+t=0 0
+m=audio 10318 RTP/AVP 8
+c=IN IP4 200.80.63.101
+a=rtpmap:8 PCMA/8000
+
+
+
+================================================================================
+
+[No.                   ] 132
+[TimeStamp             ] 2017-07-17 14:18:55.345
+[Source Address        ] 159.1.63.102
+[Source Port           ] 5060
+[Destination Address   ] 200.40.63.101
+[Destination Port      ] 5060
+[Message Interface Type] >TRACE_SIPC_UP
+[Message Type          ] 183 SESSION PROGRESS
+[Hex Message           ] SIP/2.0 183 Session Progress  From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13  To: <sip:+8613812063202@huawei.com;user=phone>;tag=be896e98a8bf89ce839c248b3218f32d  P-Asserted-Identity: <sip:+8613812063202@huawei.com;User=phone>  Privacy: none  Call-ID: isbcc174b56b3b743aad5c124b31456fdb13  CSeq: 100 INVITE  Contact: <sip:159.1.63.102:5060>  Allow: INVITE, ACK, CANCEL, BYE, PRACK, UPDATE, REFER, MESSAGE  Content-Length: 0  Via: SIP/2.0/UDP 200.40.63.101:5060;branch=z9hG4bKred2q0ws2b3w0n3s0dbanerrj;Role=3;Hpt=8e48_16;TRC=a19-ffffffff  RSeq:100  Record-Route:<sip:159.1.63.102:5060;lr>  Record-Route:<sip:200.40.63.101:5060;transport=udp;lr;Hpt=8e68_16;CxtId=4;TRC=a18-ffffffff;X-HwB2bUaCookie=4>    
+
+
+SIP/2.0 183 Session Progress
+From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13
+To: <sip:+8613812063202@huawei.com;user=phone>;tag=be896e98a8bf89ce839c248b3218f32d
+P-Asserted-Identity: <sip:+8613812063202@huawei.com;User=phone>
+Privacy: none
+Call-ID: isbcc174b56b3b743aad5c124b31456fdb13
+CSeq: 100 INVITE
+Contact: <sip:159.1.63.102:5060>
+Allow: INVITE, ACK, CANCEL, BYE, PRACK, UPDATE, REFER, MESSAGE
+Content-Length: 0
+Via: SIP/2.0/UDP 200.40.63.101:5060;branch=z9hG4bKred2q0ws2b3w0n3s0dbanerrj;Role=3;Hpt=8e48_16;TRC=a19-ffffffff
+RSeq:100
+Record-Route:<sip:159.1.63.102:5060;lr>
+Record-Route:<sip:200.40.63.101:5060;transport=udp;lr;Hpt=8e68_16;CxtId=4;TRC=a18-ffffffff;X-HwB2bUaCookie=4>
+
+
+
+
+================================================================================
+
+[No.                   ] 148
+[TimeStamp             ] 2017-07-17 14:18:55.345
+[Source Address        ] 200.40.63.151
+[Source Port           ] 5060
+[Destination Address   ] 159.1.63.101
+[Destination Port      ] 5060
+[Message Interface Type] <TRACE_SIPC_DOWN
+[Message Type          ] 183 SESSION PROGRESS
+[Hex Message           ] SIP/2.0 183 Session Progress  Via: SIP/2.0/UDP 159.1.63.101:5060;branch=z9hG4bKc174b56b3b743aad5c124b31456fdb13  Record-Route: <sip:200.40.63.151:5060;transport=udp;lr;Hpt=8e48_116;CxtId=3;TRC=a19-ffffffff;X-HwB2bUaCookie=16>,<sip:159.1.63.101:5060;lr>  Call-ID: c174b56b3b743aad5c124b31456fdb13  From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13  To: <sip:+8613812063202@huawei.com;user=phone>;tag=be896e98a8bf89ce839c248b3218f32d  CSeq: 100 INVITE  Allow: INVITE,ACK,CANCEL,BYE,PRACK,UPDATE,REFER,MESSAGE  Contact: <sip:200.40.63.151:5060;transport=udp;Hpt=8e48_16;CxtId=3;TRC=a19-ffffffff>  RSeq: 100  P-Asserted-Identity: <sip:+8613812063202@huawei.com;user=phone>  Privacy: none  Content-Length: 0    
+
+
+SIP/2.0 183 Session Progress
+Via: SIP/2.0/UDP 159.1.63.101:5060;branch=z9hG4bKc174b56b3b743aad5c124b31456fdb13
+Record-Route: <sip:200.40.63.151:5060;transport=udp;lr;Hpt=8e48_116;CxtId=3;TRC=a19-ffffffff;X-HwB2bUaCookie=16>,<sip:159.1.63.101:5060;lr>
+Call-ID: c174b56b3b743aad5c124b31456fdb13
+From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13
+To: <sip:+8613812063202@huawei.com;user=phone>;tag=be896e98a8bf89ce839c248b3218f32d
+CSeq: 100 INVITE
+Allow: INVITE,ACK,CANCEL,BYE,PRACK,UPDATE,REFER,MESSAGE
+Contact: <sip:200.40.63.151:5060;transport=udp;Hpt=8e48_16;CxtId=3;TRC=a19-ffffffff>
+RSeq: 100
+P-Asserted-Identity: <sip:+8613812063202@huawei.com;user=phone>
+Privacy: none
+Content-Length: 0
+
+
+
+
