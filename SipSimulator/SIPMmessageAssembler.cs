@@ -58,8 +58,72 @@ namespace SipSimulator
 
         public static void ConverPtmfToSipMsg(string filepath, string callerIp, string calleeIp)
         {
-            if (!File.Exists(filepath)) Log.PrintTrace("Ptmf file doesn't exist!!!", CallRole.Invalidrole);
+            if (!File.Exists(filepath))
+            {
+                Log.PrintTrace("Ptmf file doesn't exist!!!", CallRole.Invalidrole);
+                return;
+            }
 
+            if (callerIp.Split(new char[] { '.' }).Length != 4)
+            {
+                Log.PrintTrace("callerIp is Invalid when decoding Ptmf file!!!", CallRole.Invalidrole);
+                return;
+            }
+
+            if (calleeIp.Split(new char[] { '.' }).Length != 4)
+            {
+                Log.PrintTrace("calleeIp is Invalid when decoding Ptmf file!!!", CallRole.Invalidrole);
+                return;
+            }
+
+            SIPMessageUnit smu = new SIPMessageUnit();
+            bool bfindmsg = false;
+            bool bmsgend = false;
+            foreach (string line in File.ReadAllLines(filepath))
+            {
+                if (line.IndexOf("[No.") >= 0)
+                {
+                    smu.Export(); smu.Clear();
+                    bfindmsg = false; bmsgend = false;
+                }
+
+                if (line.IndexOf("Source Address") >= 0 && line.IndexOf(callerIp) >= 0)
+                {
+                    smu.SetRole(CallRole.Caller); smu.SetMsgDirection(MsgDirection.SEND);
+                }
+
+                if (line.IndexOf("Destination Address") >= 0 && line.IndexOf(callerIp) >= 0)
+                {
+                    smu.SetRole(CallRole.Caller); smu.SetMsgDirection(MsgDirection.RECV);
+                }
+
+                if (line.IndexOf("Source Address") >= 0 && line.IndexOf(calleeIp) >= 0)
+                {
+                    smu.SetRole(CallRole.Callee); smu.SetMsgDirection(MsgDirection.SEND);
+                }
+
+                if (line.IndexOf("Destination Address") >= 0 && line.IndexOf(calleeIp) >= 0)
+                {
+                    smu.SetRole(CallRole.Callee); smu.SetMsgDirection(MsgDirection.RECV);
+                }
+
+                if (line.IndexOf("Message Type") >= 0)
+                {
+                    string[] temp = line.Split(new char[] { ']' });
+                    smu.SetMessageType(temp[1].Trim().Replace(' ', '_'));
+                }
+
+                if (line.IndexOf("SIP/2.0") >= 0 && line.IndexOf("]") < 0)
+                    bfindmsg = true;
+
+                if (line.IndexOf("===") >= 0)
+                    bmsgend = true;
+
+                if (bfindmsg == true && bmsgend == false)
+                {
+                    smu.AddToMessageContent(line);
+                } 
+            }
         }
     }
 
@@ -69,9 +133,8 @@ namespace SipSimulator
         public MsgDirection msgdirect;
         public string messagecontent;
         public string messageType;
-        public string localIp;
 
-        public void SIPMessageUnit()
+        public SIPMessageUnit()
         {
             this.Clear();
         }
@@ -82,7 +145,6 @@ namespace SipSimulator
             msgdirect = MsgDirection.INVALIDMSGDIRECTION; 
             messagecontent = "";
             messageType = "";
-            localIp = "";
         }
 
         public void Set(CallRole role, MsgDirection msgdirect, string messagecontent, string messageType, string localIp)
@@ -91,7 +153,6 @@ namespace SipSimulator
             SetMsgDirection(msgdirect);
             SetMessageContent(messagecontent);
             SetMessageType(messageType);
-            SetLocalIp(localIp);
         }
 
         public void SetRole(CallRole role)
@@ -109,14 +170,15 @@ namespace SipSimulator
             this.messagecontent = messagecontent;
         }
 
+        public void AddToMessageContent(string messagecontent)
+        {
+            this.messagecontent += messagecontent + Environment.NewLine;
+        }
+
+
         public void SetMessageType(string messageType)
         {
             this.messageType = messageType;
-        }
-
-        public void SetLocalIp(string localIp)
-        {
-            this.localIp = localIp;
         }
 
         public void Export()
@@ -129,11 +191,19 @@ namespace SipSimulator
 
         void AddToMsgPlan()
         {
-            File.AppendAllText(role.ToString() + "MsgPlan.txt", msgdirect.ToString() + " " + role.ToString() + "_" + messageType + ".txt");
+            if (!File.Exists(role.ToString() + "MsgPlan.txt"))
+            {
+                File.Create(role.ToString() + "MsgPlan.txt").Close();
+            }
+            File.AppendAllText(role.ToString() + "MsgPlan.txt", msgdirect.ToString() + " " + role.ToString() + "_" + messageType + ".txt" + Environment.NewLine);
         }
 
         void AddToMsgBluePrints()
         {
+            if (!File.Exists(role.ToString() + "MsgBluePrints\\" + role.ToString() + "_" + messageType + ".txt"))
+            {
+                File.Create(role.ToString() + "MsgBluePrints\\" + role.ToString() + "_" + messageType + ".txt").Close();
+            }
             File.AppendAllText(role.ToString() + "MsgBluePrints\\" + role.ToString() + "_" + messageType + ".txt", messagecontent);
         }
 
@@ -146,8 +216,6 @@ namespace SipSimulator
             if (messagecontent.IndexOf("Call-ID:") < 0) return false;
 
             if (messageType.Length <= 0) return false;
-
-            if (localIp.Split(new char[] { '.' }).Length != 3) return false;
 
             return true;
         }
