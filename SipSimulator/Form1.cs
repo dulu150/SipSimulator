@@ -26,6 +26,16 @@ namespace SipSimulator
             myapp.GetSipMessageList("callermsgtemplate.txt", CallRole.Caller);
             myapp.GetSipMessageList("calleemsgtemplate.txt", CallRole.Callee);
 
+            //txtcallerip.Text = "159.1.63.101"; txtcallerport.Text = "5060";
+            //txtcallerremoteip.Text = "200.40.63.151"; txtcallerremoteport.Text = "5060";
+            //txtcalleeip.Text = "159.1.63.102"; txtcalleeport.Text = "5060";
+            //txtcalleeremoteip.Text = "200.40.63.101"; txtcalleeremoteport.Text = "10440";
+
+            //txtcallerip.Text = "158.1.36.11"; txtcallerport.Text = "10200";
+            //txtcallerremoteip.Text = "200.40.36.101"; txtcallerremoteport.Text = "5060";
+            //txtcalleeip.Text = "159.1.36.101"; txtcalleeport.Text = "5060";
+            //txtcalleeremoteip.Text = "200.40.36.151"; txtcalleeremoteport.Text = "10440";
+
             txtcallerip.Text = "127.0.0.1"; txtcallerport.Text = "12345";
             txtcallerremoteip.Text = "127.0.0.1"; txtcallerremoteport.Text = "8848";
             txtcalleeip.Text = "127.0.0.1"; txtcalleeport.Text = "8848";
@@ -61,6 +71,8 @@ namespace SipSimulator
 
         private void btnptmfanalyzestart_Click(object sender, EventArgs e)
         {
+            SIPMmessageAssembler.DeleteHistoryInfo();
+
             if (txnptmfcallerip.Text.Split(new char[] { '.' }).Length != 4)
             {
                 MessageBox.Show("主叫IP无效");

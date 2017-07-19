@@ -59,9 +59,13 @@ namespace SipSimulator
             if (msgsource != MsgSourceType.FROM_MSGTYPE)
                 return "";
 
-            string recieveString = sendClient.Recv();
-            while(recieveString.IndexOf(msgTypeWaitToRecv) < 0)
+            string[] alltext;
+            string recieveString;
+            do 
+            {
                 recieveString = sendClient.Recv();
+                alltext = recieveString.Split(new char[] { '\r', '\n' });
+            } while (alltext[0].IndexOf(msgTypeWaitToRecv) < 0 || alltext[0].IndexOf("SIP/2.0") < 0);
 
             ViaHeader = SIPMmessageAssembler.GetViaHeaderFromSipMessage(recieveString);
             return recieveString;

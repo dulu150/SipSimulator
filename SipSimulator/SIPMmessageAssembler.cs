@@ -13,11 +13,8 @@ namespace SipSimulator
             string[] AllText = File.ReadAllLines(filepath);
             string sendString = "";
 
-            for (int i = 0; i < AllText.Length - 1; i++)
-            {
+            for (int i = 0; i < AllText.Length; i++)
                 sendString += AllText[i] + "\r\n";
-            }
-            sendString += AllText[AllText.Length - 1] + "\r\n";
 
             return sendString;
         }
@@ -39,43 +36,25 @@ namespace SipSimulator
         {
             if (viaHeader.Length <= 0)
                 return sipMessage;
+            
+            if(File.Exists("temp.txt"))
+                File.Delete("temp.txt");
+            File.Create("temp.txt").Close();
+            File.AppendAllText("temp.txt", sipMessage);
 
-            string[] AllText = sipMessage.Split(new char[] { '\r', '\n' });
             string sipMessageAfterMod = "";
-
-            foreach (string line in AllText)
+            foreach (string line in File.ReadAllLines("temp.txt"))
             {
                 if (line.IndexOf("Via:") >= 0)
                     sipMessageAfterMod += viaHeader + Environment.NewLine;
-                else if (line.StartsWith("\r\n") || line.Length <= 0)
-                    continue;
                 else
                     sipMessageAfterMod += line + Environment.NewLine;
             }
-            sipMessageAfterMod +=  Environment.NewLine;
             return sipMessageAfterMod;
         }
 
         public static void ConverPtmfToSipMsg(string filepath, string callerIp, string calleeIp)
         {
-            if (!File.Exists(filepath))
-            {
-                Log.PrintTrace("Ptmf file doesn't exist!!!", CallRole.Invalidrole);
-                return;
-            }
-
-            if (callerIp.Split(new char[] { '.' }).Length != 4)
-            {
-                Log.PrintTrace("callerIp is Invalid when decoding Ptmf file!!!", CallRole.Invalidrole);
-                return;
-            }
-
-            if (calleeIp.Split(new char[] { '.' }).Length != 4)
-            {
-                Log.PrintTrace("calleeIp is Invalid when decoding Ptmf file!!!", CallRole.Invalidrole);
-                return;
-            }
-
             SIPMessageUnit smu = new SIPMessageUnit();
             bool bfindmsg = false;
             bool bmsgend = false;
@@ -124,6 +103,20 @@ namespace SipSimulator
                     smu.AddToMessageContent(line);
                 } 
             }
+        }
+
+        public static void DeleteHistoryInfo()
+        {
+            File.Delete("CalleeMsgPlan.txt"); File.Delete("CallerMsgPlan.txt");
+
+            string pattern = "*.txt";
+            string[] strFileName = Directory.GetFiles("CalleeMsgBluePrints", pattern);
+            foreach (var item in strFileName)
+                File.Delete(item);
+
+            strFileName = Directory.GetFiles("CallerMsgBluePrints", pattern);
+            foreach (var item in strFileName)
+                File.Delete(item);
         }
     }
 
@@ -219,6 +212,5 @@ namespace SipSimulator
 
             return true;
         }
-
     }
 }
