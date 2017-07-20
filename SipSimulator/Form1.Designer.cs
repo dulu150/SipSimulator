@@ -49,11 +49,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtcalleeremoteport = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnptmfanalyzestart = new System.Windows.Forms.Button();
+            this.txnptmfcallerip = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txnptmfcalleeip = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtptmfpath = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCallStart
             // 
-            this.btnCallStart.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCallStart.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCallStart.Location = new System.Drawing.Point(12, 396);
             this.btnCallStart.Name = "btnCallStart";
             this.btnCallStart.Size = new System.Drawing.Size(684, 61);
@@ -64,7 +73,7 @@
             // 
             // btnCallStop
             // 
-            this.btnCallStop.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCallStop.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCallStop.Location = new System.Drawing.Point(12, 472);
             this.btnCallStop.Name = "btnCallStop";
             this.btnCallStop.Size = new System.Drawing.Size(684, 61);
@@ -231,11 +240,86 @@
             this.txtcalleeremoteport.Size = new System.Drawing.Size(66, 21);
             this.txtcalleeremoteport.TabIndex = 22;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtptmfpath);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.txnptmfcalleeip);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.txnptmfcallerip);
+            this.groupBox1.Controls.Add(this.btnptmfanalyzestart);
+            this.groupBox1.Location = new System.Drawing.Point(711, 22);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(257, 511);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "跟踪解析";
+            // 
+            // btnptmfanalyzestart
+            // 
+            this.btnptmfanalyzestart.Location = new System.Drawing.Point(90, 159);
+            this.btnptmfanalyzestart.Name = "btnptmfanalyzestart";
+            this.btnptmfanalyzestart.Size = new System.Drawing.Size(75, 23);
+            this.btnptmfanalyzestart.TabIndex = 0;
+            this.btnptmfanalyzestart.Text = "开始分析";
+            this.btnptmfanalyzestart.UseVisualStyleBackColor = true;
+            this.btnptmfanalyzestart.Click += new System.EventHandler(this.btnptmfanalyzestart_Click);
+            // 
+            // txnptmfcallerip
+            // 
+            this.txnptmfcallerip.Location = new System.Drawing.Point(66, 26);
+            this.txnptmfcallerip.Name = "txnptmfcallerip";
+            this.txnptmfcallerip.Size = new System.Drawing.Size(131, 21);
+            this.txnptmfcallerip.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 12);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "主叫IP";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 74);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 12);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "被叫IP";
+            // 
+            // txnptmfcalleeip
+            // 
+            this.txnptmfcalleeip.Location = new System.Drawing.Point(66, 65);
+            this.txnptmfcalleeip.Name = "txnptmfcalleeip";
+            this.txnptmfcalleeip.Size = new System.Drawing.Size(131, 21);
+            this.txnptmfcalleeip.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 116);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 12);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "文件路径";
+            // 
+            // txtptmfpath
+            // 
+            this.txtptmfpath.Location = new System.Drawing.Point(66, 107);
+            this.txtptmfpath.Name = "txtptmfpath";
+            this.txtptmfpath.Size = new System.Drawing.Size(131, 21);
+            this.txtptmfpath.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 545);
+            this.ClientSize = new System.Drawing.Size(980, 545);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtcalleeremoteport);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -260,6 +344,8 @@
             this.Name = "Form1";
             this.Text = "SipSimulatro V1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +374,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtcalleeremoteport;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnptmfanalyzestart;
+        private System.Windows.Forms.TextBox txnptmfcalleeip;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txnptmfcallerip;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtptmfpath;
     }
 }
 

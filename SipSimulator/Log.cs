@@ -17,11 +17,11 @@ namespace SipSimulator
         public static void PrintTrace(string err, CallRole role)
         {
             if (role == CallRole.Caller)
-                File.AppendAllText("callerlog.txt", err + Environment.NewLine);
+                File.AppendAllText("Log\\callerlog.txt", err + Environment.NewLine);
             else if (role == CallRole.Callee)
-                File.AppendAllText("calleelog.txt", err + Environment.NewLine);
+                File.AppendAllText("Log\\calleelog.txt", err + Environment.NewLine);
             else
-                File.AppendAllText("commonlog.txt", err + Environment.NewLine);
+                File.AppendAllText("Log\\commonlog.txt", err + Environment.NewLine);
         }
     }
 }

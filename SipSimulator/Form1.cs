@@ -23,8 +23,8 @@ namespace SipSimulator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            myapp.GetSipMessageList("callermsgtemplate.txt", CallRole.Caller);
-            myapp.GetSipMessageList("calleemsgtemplate.txt", CallRole.Callee);
+            myapp.GetSipMessageList("CallerMsgPlan.txt", CallRole.Caller);
+            myapp.GetSipMessageList("CalleeMsgPlan.txt", CallRole.Callee);
 
             //txtcallerip.Text = "159.1.63.101"; txtcallerport.Text = "5060";
             //txtcallerremoteip.Text = "200.40.63.151"; txtcallerremoteport.Text = "5060";

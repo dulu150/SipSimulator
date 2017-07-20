@@ -89,7 +89,7 @@ namespace SipSimulator
                 if (line.IndexOf("Message Type") >= 0)
                 {
                     string[] temp = line.Split(new char[] { ']' });
-                    smu.SetMessageType(temp[1].Trim().Replace(' ', '_'));
+                    smu.SetMessageType(temp[1].Trim());
                 }
 
                 if (line.IndexOf("SIP/2.0") >= 0 && line.IndexOf("]") < 0)
@@ -185,19 +185,31 @@ namespace SipSimulator
         void AddToMsgPlan()
         {
             if (!File.Exists(role.ToString() + "MsgPlan.txt"))
-            {
                 File.Create(role.ToString() + "MsgPlan.txt").Close();
+
+            if (msgdirect == MsgDirection.RECV)
+            {
+                File.AppendAllText(role.ToString() + "MsgPlan.txt", msgdirect.ToString() + " " + messageType + Environment.NewLine);
             }
-            File.AppendAllText(role.ToString() + "MsgPlan.txt", msgdirect.ToString() + " " + role.ToString() + "_" + messageType + ".txt" + Environment.NewLine);
+            else
+            {
+                string sendmsgfilename = role.ToString() + "MsgBluePrints\\" + role.ToString() + "_" + messageType + ".txt";
+                sendmsgfilename = sendmsgfilename.Replace(' ', '_');
+                File.AppendAllText(role.ToString() + "MsgPlan.txt", msgdirect.ToString() + " " + sendmsgfilename + Environment.NewLine);
+            }
+            return;
         }
 
         void AddToMsgBluePrints()
         {
-            if (!File.Exists(role.ToString() + "MsgBluePrints\\" + role.ToString() + "_" + messageType + ".txt"))
+            string sendmsgfilename = role.ToString() + "_" + messageType + ".txt";
+            sendmsgfilename = sendmsgfilename.Replace(' ', '_');
+
+            if (!File.Exists(role.ToString() + "MsgBluePrints\\" + sendmsgfilename))
             {
-                File.Create(role.ToString() + "MsgBluePrints\\" + role.ToString() + "_" + messageType + ".txt").Close();
+                File.Create(role.ToString() + "MsgBluePrints\\" + sendmsgfilename).Close();
             }
-            File.AppendAllText(role.ToString() + "MsgBluePrints\\" + role.ToString() + "_" + messageType + ".txt", messagecontent);
+            File.AppendAllText(role.ToString() + "MsgBluePrints\\" + sendmsgfilename, messagecontent);
         }
 
         bool IsValid()
