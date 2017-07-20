@@ -26,20 +26,12 @@ namespace SipSimulator
             myapp.GetSipMessageList("CallerMsgPlan.txt", CallRole.Caller);
             myapp.GetSipMessageList("CalleeMsgPlan.txt", CallRole.Callee);
 
-            //txtcallerip.Text = "159.1.63.101"; txtcallerport.Text = "5060";
-            //txtcallerremoteip.Text = "200.40.63.151"; txtcallerremoteport.Text = "5060";
-            //txtcalleeip.Text = "159.1.63.102"; txtcalleeport.Text = "5060";
-            //txtcalleeremoteip.Text = "200.40.63.101"; txtcalleeremoteport.Text = "10440";
+            Config config = new Config("config.txt");
 
-            //txtcallerip.Text = "158.1.36.11"; txtcallerport.Text = "10200";
-            //txtcallerremoteip.Text = "200.40.36.101"; txtcallerremoteport.Text = "5060";
-            //txtcalleeip.Text = "159.1.36.101"; txtcalleeport.Text = "5060";
-            //txtcalleeremoteip.Text = "200.40.36.151"; txtcalleeremoteport.Text = "10440";
-
-            txtcallerip.Text = "127.0.0.1"; txtcallerport.Text = "12345";
-            txtcallerremoteip.Text = "127.0.0.1"; txtcallerremoteport.Text = "8848";
-            txtcalleeip.Text = "127.0.0.1"; txtcalleeport.Text = "8848";
-            txtcalleeremoteip.Text = "127.0.0.1"; txtcalleeremoteport.Text = "12345";
+            txtcallerip.Text = config.callerLocalIp; txtcallerport.Text = config.callerLocalPort;
+            txtcallerremoteip.Text = config.callerRemoteIp; txtcallerremoteport.Text = config.callerRemotePort;
+            txtcalleeip.Text = config.calleeLocalIp; txtcalleeport.Text = config.calleeLocalPort;
+            txtcalleeremoteip.Text = config.calleeRemoteIp; txtcalleeremoteport.Text = config.calleeRemotePort;
 
             Control.CheckForIllegalCrossThreadCalls = false;
         }
