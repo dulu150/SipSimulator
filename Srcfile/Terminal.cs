@@ -9,6 +9,7 @@ namespace SipSimulator
     class Terminal
     {
         private Sender sendClient;
+        private string ViaHeader;
 
         public Terminal(string protocal, string localip, string localport, string remoteip, string remoteport)
         {
@@ -17,16 +18,22 @@ namespace SipSimulator
                 Log.RecordErr("Socket启动失败,请检查配置");
             else
                 Log.RecordErr("Socket启动成功了:" + localip + ":" + localport);
+
+            ViaHeader = "";
         }
 
         public string Send(string textWaitToSend)
         {
+            textWaitToSend = SIPMmessageAssembler.SetViaHeaderToSipMessage(textWaitToSend, ViaHeader);
             sendClient.Send(textWaitToSend);
             return textWaitToSend;
         }
 
-        public string Send(string fileWaitToSendPath, bool readFile)
+        public string Send(string fileWaitToSendPath, MsgSourceType msgsource)
         {
+            if (msgsource != MsgSourceType.FROM_FILE)
+                return "";
+
             string sendstring = SIPMmessageAssembler.GetSipMessageFromFile(fileWaitToSendPath);
             if (sendstring.Length <= 0)
             {
@@ -34,21 +41,34 @@ namespace SipSimulator
                 return "待发送的SIP消息无效,请检查SIP消息";
             }
 
+            sendstring = SIPMmessageAssembler.SetViaHeaderToSipMessage(sendstring, ViaHeader);
             sendClient.Send(sendstring);
             return sendstring;
         }
 
         public string Recv()
         {
-            return sendClient.Recv();
+            string recvString = sendClient.Recv();
+            ViaHeader = SIPMmessageAssembler.GetViaHeaderFromSipMessage(recvString);
+
+            return recvString;
         }
 
-        public bool Recv(string msgTypeWaitToRecv)
+        public string Recv(string msgTypeWaitToRecv, MsgSourceType msgsource)
         {
-            if (sendClient.Recv().IndexOf(msgTypeWaitToRecv) >= 0)
-                return true;
+            if (msgsource != MsgSourceType.FROM_MSGTYPE)
+                return "";
 
-            return false;
+            string[] alltext;
+            string recieveString;
+            do 
+            {
+                recieveString = sendClient.Recv();
+                alltext = recieveString.Split(new char[] { '\r', '\n' });
+            } while (alltext[0].IndexOf(msgTypeWaitToRecv, StringComparison.OrdinalIgnoreCase) < 0 || alltext[0].IndexOf("SIP/2.0", StringComparison.OrdinalIgnoreCase) < 0);
+
+            ViaHeader = SIPMmessageAssembler.GetViaHeaderFromSipMessage(recieveString);
+            return recieveString;
         }
 
         public void Stop()
