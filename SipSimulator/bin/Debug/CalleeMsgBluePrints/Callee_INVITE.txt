@@ -1,0 +1,29 @@
+INVITE sip:+8613812063202@huawei.com;user=phone SIP/2.0
+Via: SIP/2.0/UDP 200.40.63.101:5060;branch=z9hG4bKred2q0ws2b3w0n3s0dbanerrj;Role=3;Hpt=8e48_16;TRC=a19-ffffffff
+Record-Route: <sip:200.40.63.101:5060;transport=udp;lr;Hpt=8e48_16;CxtId=4;TRC=a19-ffffffff;X-HwB2bUaCookie=12>
+Call-ID: isbcc174b56b3b743aad5c124b31456fdb13
+From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13
+To: <sip:+8613812063202@huawei.com;user=phone>
+CSeq: 100 INVITE
+Allow: INVITE,ACK,CANCEL,BYE,PRACK,UPDATE,REFER,MESSAGE
+Contact: <sip:200.40.63.101:5060;transport=udp;Hpt=8e48_16;CxtId=4;TRC=a19-ffffffff>
+Max-Forwards: 68
+Require: precondition
+Supported: 100rel
+P-Asserted-Identity: <sip:+8613812063201@huawei.com;user=phone>
+Privacy: none
+P-Charging-Vector: icid-value="AyretyU0dm+6O2IrT5tAFrbHLso=023551024";orig-ioi=home1.net
+Content-Length: 167
+Content-Type: application/sdp
+
+v=0
+o=- 1347361369 1347362462 IN IP4 200.80.63.101
+s=SBC call
+c=IN IP4 200.80.63.101
+t=0 0
+m=audio 10318 RTP/AVP 8
+c=IN IP4 200.80.63.101
+a=rtpmap:8 PCMA/8000
+
+
+

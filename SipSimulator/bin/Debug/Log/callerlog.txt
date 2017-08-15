@@ -1,0 +1,8 @@
+Now Caller decide to SEND msg:CallerMsgBluePrints\Caller_INVITE.txt
+Now Caller decide to SEND msg:CallerMsgBluePrints\Caller_INVITE.txt
+caller create socket:158.1.88.11:10200--200.40.88.101:5060
+Now Caller decide to SEND msg:CallerMsgBluePrints\Caller_INVITE.txt
+Now Caller decide to SEND msg:CallerMsgBluePrints\Caller_INVITE.txt
+Now Caller decide to SEND msg:CallerMsgBluePrints\Caller_INVITE.txt
+Now Caller decide to SEND msg:CallerMsgBluePrints\Caller_INVITE.txt
+Now Caller decide to SEND msg:CallerMsgBluePrints\Caller_INVITE.txt

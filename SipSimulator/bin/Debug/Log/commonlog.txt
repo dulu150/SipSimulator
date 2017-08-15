@@ -1,0 +1,117 @@
+158.1.88.11:10200:send msg:REGISTER sip:sip.osk.com SIP/2.0
+Via: SIP/2.0/UDP 172.20.56.198:10016;branch=z9hG4bKa39gzto3ob9dt4zzz69cagc6a;Role=3;Hpt=8e42_16;TRC=708-ffffffff;srti=s7_2
+Call-ID: sbcthLNQZBAxLpaAL6xBLzpuBzB4ZxBnalzzmVIHIEIFaBnnzAnzc
+From: <sip:+33286083025@sip.osk.com>;tag=20bde64dm191sac142b99p5060v0r1246514686
+To: <sip:+33286083025@sip.osk.com>
+CSeq: 960 REGISTER
+Max-Forwards: 70
+Expires: 3600
+Authorization: Digest username="33286083025",realm="sip.osk.com",nonce="Xib54k/+g5M0yZXoJ29tWA==",uri="sip:sip.osk.com",response="689ae7df83939bae5510b3f140333e9b",algorithm=MD5
+Contact: <sip:+33286083025@172.20.56.198:10016;transport=udp;Hpt=8e42_16;ssn;TRC=708-ffffffff;srti=s7_2>
+Content-Length: 0
+
+
+158.1.88.11:10200:send msg:REGISTER sip:sip.osk.com SIP/2.0
+Via: SIP/2.0/UDP 172.20.56.198:10016;branch=z9hG4bKa39gzto3ob9dt4zzz69cagc6a;Role=3;Hpt=8e42_16;TRC=708-ffffffff;srti=s7_2
+Call-ID: sbcthLNQZBAxLpaAL6xBLzpuBzB4ZxBnalzzmVIHIEIFaBnnzAnzc
+From: <sip:+33286083025@sip.osk.com>;tag=20bde64dm191sac142b99p5060v0r1246514686
+To: <sip:+33286083025@sip.osk.com>
+CSeq: 960 REGISTER
+Max-Forwards: 70
+Expires: 3600
+Authorization: Digest username="33286083025",realm="sip.osk.com",nonce="Xib54k/+g5M0yZXoJ29tWA==",uri="sip:sip.osk.com",response="689ae7df83939bae5510b3f140333e9b",algorithm=MD5
+Contact: <sip:+33286083025@172.20.56.198:10016;transport=udp;Hpt=8e42_16;ssn;TRC=708-ffffffff;srti=s7_2>
+Content-Length: 0
+
+
+158.1.88.11:10200:send msg:REGISTER sip:sip.osk.com SIP/2.0
+Via: SIP/2.0/UDP 172.20.56.198:10016;branch=z9hG4bKa39gzto3ob9dt4zzz69cagc6a;Role=3;Hpt=8e42_16;TRC=708-ffffffff;srti=s7_2
+Call-ID: sbcthLNQZBAxLpaAL6xBLzpuBzB4ZxBnalzzmVIHIEIFaBnnzAnzc
+From: <sip:+33286083025@sip.osk.com>;tag=20bde64dm191sac142b99p5060v0r1246514686
+To: <sip:+33286083025@sip.osk.com>
+CSeq: 960 REGISTER
+Max-Forwards: 70
+Expires: 3600
+Authorization: Digest username="33286083025",realm="sip.osk.com",nonce="Xib54k/+g5M0yZXoJ29tWA==",uri="sip:sip.osk.com",response="689ae7df83939bae5510b3f140333e9b",algorithm=MD5
+Contact: <sip:+33286083025@172.20.56.198:10016;transport=udp;Hpt=8e42_16;ssn;TRC=708-ffffffff;srti=s7_2>
+Content-Length: 0
+
+
+158.1.88.11:10200:send msg:REGISTER sip:sip.osk.com SIP/2.0
+Via: SIP/2.0/UDP 172.20.56.198:10016;branch=z9hG4bKa39gzto3ob9dt4zzz69cagc6a;Role=3;Hpt=8e42_16;TRC=708-ffffffff;srti=s7_2
+Call-ID: sbcthLNQZBAxLpaAL6xBLzpuBzB4ZxBnalzzmVIHIEIFaBnnzAnzc
+From: <sip:+33286083025@sip.osk.com>;tag=20bde64dm191sac142b99p5060v0r1246514686
+To: <sip:+33286083025@sip.osk.com>
+CSeq: 960 REGISTER
+Max-Forwards: 70
+Expires: 3600
+Authorization: Digest username="33286083025",realm="sip.osk.com",nonce="Xib54k/+g5M0yZXoJ29tWA==",uri="sip:sip.osk.com",response="689ae7df83939bae5510b3f140333e9b",algorithm=MD5
+Contact: <sip:+33286083025@172.20.56.198:10016;transport=udp;Hpt=8e42_16;ssn;TRC=708-ffffffff;srti=s7_2>
+Content-Length: 0
+
+
+158.1.88.11:10200:send msg:REGISTER sip:ims.mnc012.mcc454.3gppnetwork.org SIP/2.0
+To: <sip:454120412077239@ims.mnc012.mcc454.3gppnetwork.org>
+From: <sip:454120412077239@ims.mnc012.mcc454.3gppnetwork.org>;tag=9N2AvsSeni
+Expires: 600000
+Require: sec-agree
+Proxy-Require: sec-agree
+Security-Client: ipsec-3gpp;alg=hmac-md5-96;ealg=aes-cbc;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-sha-1-96;ealg=aes-cbc;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-md5-96;ealg=null;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-sha-1-96;ealg=null;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455
+Call-ID: AfcA1cVKnUwPeHjjjm5guP6d
+Contact: <sip:10.112.66.8:50175>;+g.3gpp.icsi-ref="urn%3Aurn-7%3A3gpp-service.ims.icsi.mmtel";+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+sip.instance="<urn:gsma:imei:35925406-162590-0>"
+CSeq: 32 REGISTER
+Authorization: Digest nonce="Vp+FUQteqgzWQk7eAvM6x6WlqYGHLXJM47PdGGJuZS4=",uri="sip:ims.mnc012.mcc454.3gppnetwork.org",response="1abb6afa63787bed87db65fdca2cb75e",username="454120412077239@ims.mnc012.mcc454.3gppnetwork.org",algorithm=AKAv1-MD5,realm="ims.mnc012.mcc454.3gppnetwork.org"
+Via: SIP/2.0/TCP 10.112.66.8:50175;branch=z9hG4bK2uLt5W7EAkexCdu;rport
+Allow: ACK,BYE,CANCEL,INFO,INVITE,MESSAGE,NOTIFY,OPTIONS,PRACK,REFER,UPDATE
+Supported: 100rel,path,replaces
+Max-Forwards: 70
+User-Agent: iOS/10.3.2 (14F89) iPhone
+P-Access-Network-Info: IEEE-802.11;country=CN;i-wlan-node-id=ffffffffffff
+P-Cellular-Network-Info: 3GPP-UTRAN-FDD;cell-time=2017-07-24T05:35:57Z;reg-time=1970-01-01T00:00:00Z;utran-cell-id-3gpp=46001d30dd0faf47
+Security-Verify: ipsec-3gpp;alg=hmac-md5-96;ealg=aes-cbc;mod=trans;port-c=9950;port-s=9900;prot=esp;spi-c=2529680812;spi-s=3514031661
+Content-Length: 0
+
+158.1.88.11:10200:send msg:REGISTER sip:ims.mnc012.mcc454.3gppnetwork.org SIP/2.0
+To: <sip:454120412077239@ims.mnc012.mcc454.3gppnetwork.org>
+From: <sip:454120412077239@ims.mnc012.mcc454.3gppnetwork.org>;tag=9N2AvsSeni
+Expires: 600000
+Require: sec-agree
+Proxy-Require: sec-agree
+Security-Client: ipsec-3gpp;alg=hmac-md5-96;ealg=aes-cbc;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-sha-1-96;ealg=aes-cbc;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-md5-96;ealg=null;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-sha-1-96;ealg=null;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455
+Call-ID: AfcA1cVKnUwPeHjjjm5guP6d
+Contact: <sip:10.112.66.8:50175>;+g.3gpp.icsi-ref="urn%3Aurn-7%3A3gpp-service.ims.icsi.mmtel";+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+sip.instance="<urn:gsma:imei:35925406-162590-0>"
+CSeq: 32 REGISTER
+Authorization: Digest nonce="Vp+FUQteqgzWQk7eAvM6x6WlqYGHLXJM47PdGGJuZS4=",uri="sip:ims.mnc012.mcc454.3gppnetwork.org",response="1abb6afa63787bed87db65fdca2cb75e",username="454120412077239@ims.mnc012.mcc454.3gppnetwork.org",algorithm=AKAv1-MD5,realm="ims.mnc012.mcc454.3gppnetwork.org"
+Via: SIP/2.0/TCP 10.112.66.8:50175;branch=z9hG4bK2uLt5W7EAkexCdu;rport
+Allow: ACK,BYE,CANCEL,INFO,INVITE,MESSAGE,NOTIFY,OPTIONS,PRACK,REFER,UPDATE
+Supported: 100rel,path,replaces
+Max-Forwards: 70
+User-Agent: iOS/10.3.2 (14F89) iPhone
+P-Access-Network-Info: IEEE-802.11;country=CN;i-wlan-node-id=ffffffffffff
+P-Cellular-Network-Info: 3GPP-UTRAN-FDD;cell-time=2017-07-24T05:35:57Z;reg-time=1970-01-01T00:00:00Z;utran-cell-id-3gpp=46001d30dd0faf47
+Security-Verify: ipsec-3gpp;alg=hmac-md5-96;ealg=aes-cbc;mod=trans;port-c=9950;port-s=9900;prot=esp;spi-c=2529680812;spi-s=3514031661
+Content-Length: 0
+
+
+158.1.88.11:10200:send msg:REGISTER sip:ims.mnc012.mcc454.3gppnetwork.org SIP/2.0
+To: <sip:454120412077239@ims.mnc012.mcc454.3gppnetwork.org>
+From: <sip:454120412077239@ims.mnc012.mcc454.3gppnetwork.org>;tag=9N2AvsSeni
+Expires: 600000
+Require: sec-agree
+Proxy-Require: sec-agree
+Security-Client: ipsec-3gpp;alg=hmac-md5-96;ealg=aes-cbc;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-sha-1-96;ealg=aes-cbc;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-md5-96;ealg=null;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455,ipsec-3gpp;alg=hmac-sha-1-96;ealg=null;mod=trans;port-c=54630;port-s=50175;prot=esp;spi-c=196502369;spi-s=262707455
+Call-ID: AfcA1cVKnUwPeHjjjm5guP6d
+Contact: <sip:10.112.66.8:50175>;+g.3gpp.icsi-ref="urn%3Aurn-7%3A3gpp-service.ims.icsi.mmtel";+g.3gpp.mid-call;+g.3gpp.srvcc-alerting;+sip.instance="<urn:gsma:imei:35925406-162590-0>"
+CSeq: 32 REGISTER
+Authorization: Digest nonce="Vp+FUQteqgzWQk7eAvM6x6WlqYGHLXJM47PdGGJuZS4=",uri="sip:ims.mnc012.mcc454.3gppnetwork.org",response="1abb6afa63787bed87db65fdca2cb75e",username="454120412077239@ims.mnc012.mcc454.3gppnetwork.org",algorithm=AKAv1-MD5,realm="ims.mnc012.mcc454.3gppnetwork.org"
+Via: SIP/2.0/UDP 10.112.66.8:50175;branch=z9hG4bK2uLt5W7EAkexCdu;rport
+Allow: ACK,BYE,CANCEL,INFO,INVITE,MESSAGE,NOTIFY,OPTIONS,PRACK,REFER,UPDATE
+Supported: 100rel,path,replaces
+Max-Forwards: 70
+User-Agent: iOS/10.3.2 (14F89) iPhone
+P-Access-Network-Info: IEEE-802.11;country=CN;i-wlan-node-id=ffffffffffff
+P-Cellular-Network-Info: 3GPP-UTRAN-FDD;cell-time=2017-07-24T05:35:57Z;reg-time=1970-01-01T00:00:00Z;utran-cell-id-3gpp=46001d30dd0faf47
+Security-Verify: ipsec-3gpp;alg=hmac-md5-96;ealg=aes-cbc;mod=trans;port-c=9950;port-s=9900;prot=esp;spi-c=2529680812;spi-s=3514031661
+Content-Length: 0
+
+

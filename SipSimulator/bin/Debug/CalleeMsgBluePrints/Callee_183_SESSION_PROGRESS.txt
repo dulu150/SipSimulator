@@ -1,0 +1,18 @@
+SIP/2.0 183 Session Progress
+From: <sip:+8613812063201@huawei.com;user=phone>;tag=c174b56b3b743aad5c124b31456fdb13
+To: <sip:+8613812063202@huawei.com;user=phone>;tag=be896e98a8bf89ce839c248b3218f32d
+P-Asserted-Identity: <sip:+8613812063202@huawei.com;User=phone>
+Privacy: none
+Call-ID: isbcc174b56b3b743aad5c124b31456fdb13
+CSeq: 100 INVITE
+Contact: <sip:159.1.63.102:5060>
+Allow: INVITE, ACK, CANCEL, BYE, PRACK, UPDATE, REFER, MESSAGE
+Content-Length: 0
+Via: SIP/2.0/UDP 200.40.63.101:5060;branch=z9hG4bKred2q0ws2b3w0n3s0dbanerrj;Role=3;Hpt=8e48_16;TRC=a19-ffffffff
+RSeq:100
+Record-Route:<sip:159.1.63.102:5060;lr>
+Record-Route:<sip:200.40.63.101:5060;transport=udp;lr;Hpt=8e68_16;CxtId=4;TRC=a18-ffffffff;X-HwB2bUaCookie=4>
+
+
+
+
