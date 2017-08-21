@@ -16,7 +16,7 @@
 
 ## 操作指导：
 第一步：配置文件中定义主被叫用户的IP
-
+![image](http://github.com/dulu150/SipSimulator/Image/Main.PNG)
 
 第二步：定义主被叫消息流程
 举例：主叫发送INVITE消息，发送的消息内容为CallerMsgBluePrints目录下的Caller_INVITE.txt文件中对应的消息内容
